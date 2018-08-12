@@ -31,29 +31,57 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+int score = 0;
 		// 2. Set the size of the window in the initializeGui() method below
-
-		for (int i = 0; i < 4; i++) {
 			
 			// 4. Ask the user who this person is and store their answer
 			String guess= JOptionPane.showInputDialog("who is this?");
-			
+			if(guess.equals(("arnold"))){
+				JOptionPane.showMessageDialog(null, "You are correct");
+				score++;
+			} else {
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
 
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
-
+JOptionPane.showMessageDialog(null, "You are wrong, it is Arnold");
+			}
 			// 7. Use the showNextImage() method below to get the next image
 			showNextImage();
 		    // 8. Show them their current score
-			
+JOptionPane.showMessageDialog(null, "Score: " + score);
 			// 9. .... repeat for all your images.....
-
-
+String guess2 = JOptionPane.showInputDialog("who is this?");
+if(guess2.equals(("leonardo"))){
+	JOptionPane.showMessageDialog(null, "You are correct");
+	score++;
+} else {
+	JOptionPane.showMessageDialog(null, "You are wrong, it is Leonardo");
 		}
+showNextImage();
+JOptionPane.showMessageDialog(null, "Score: " + score);
 
+String guess3 = JOptionPane.showInputDialog("who is this?");
+if(guess3.equals(("morgan"))){
+	JOptionPane.showMessageDialog(null, "You are correct");
+	score++;
+} else {
+	JOptionPane.showMessageDialog(null, "You are wrong, it is Morgan");
+		}
+showNextImage();
+JOptionPane.showMessageDialog(null, "Score: " + score);
+
+String guess4 = JOptionPane.showInputDialog("who is this?");
+if(guess4
+		.equals(("jack"))){
+	JOptionPane.showMessageDialog(null, "You are correct");
+	score++;
+} else {
+	JOptionPane.showMessageDialog(null, "You are wrong, it is jack");
+		}
+showNextImage();
+JOptionPane.showMessageDialog(null, "Score: " + score);
 	}
 
 	public void showNextImage() {
@@ -75,7 +103,7 @@ public class BodyPartQuiz {
 		window.add(panel);
 		
 		// 3. Change the size of the window so that you can only see part of the image.		
-		window.setSize(500,500);
+		window.setSize(180,180);
 		
 		showNextImage();
 		
